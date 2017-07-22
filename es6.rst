@@ -45,7 +45,7 @@ variables are declared with ``const``::
   console.log(result)   // prints 7!
 
   function sub(x, y) {
-    let val = x + y  
+    let val = x + y
     return val
   }
 
@@ -94,7 +94,7 @@ The output is::
 If we use a ``var`` declaration we see different behavior::
 
   function varscopetest() {
-    console.log(1, x) 
+    console.log(1, x)
     var x
     console.log(2, x)
     x = 42
@@ -246,9 +246,9 @@ We can coerce other values to booleans with the ``Boolean`` wrapper. Most values
   * - ``"string"``
     - ``""`` (empty string)
   * - ``[]`` (empty list)
-    - 
+    -
   * - ``{}`` (empty object)
-    - 
+    -
   * - ``Boolean(new Boolean(false))``
     -
 
@@ -320,7 +320,7 @@ In addition there is support for *computed property keys*::
   const inst = 'Guitar'
   const person = {
     // like playsGuitar: true
-    ['plays' + inst]: true 
+    ['plays' + inst]: true
   }
 
 There is also a shorthand for *method definition*::
@@ -419,9 +419,9 @@ An example of a accessor descriptor::
       }
     });
   }
-  
+
   let p = new Person('Richard');
-  
+
   console.log(p.name);  // writes 'Ringo'
   p.name = 'Fred';
   console.log(p.name);  // writes 'Fred'
@@ -555,7 +555,7 @@ for creating float values. See the number types table.
 
 .. table:: Number types
 
-  
+
   ================ ===========================
   Type             Example
   ================ ===========================
@@ -625,13 +625,13 @@ When called as a function (without ``new``), it will perform a type conversion t
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.5\textwidth} >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.4\textwidth}}
 
-.. list-table:: Number Prototype Methods 
+.. list-table:: Number Prototype Methods
   :header-rows: 1
 
   * - Method
     - Description
   * - ``n.p.constructor()``
-    - 
+    -
   * - ``n.p.toExponential( [numDigits])``
     - Return a string in exponential notation with ``numDigits`` of precision
   * - ``n.p.toFixed([digits])``
@@ -742,7 +742,7 @@ ES6 has a built-in math library to perform common operations.
   * - ``Math.sign(n)``
     - Return ``-1``, ``0``, or ``1`` for negative, zero, or positive value of ``n``
   * - ``Math.sin(n)``
-    - Compute sine 
+    - Compute sine
   * - ``Math.sinh(n)``
     - Compute hyperbolic sine
   * - ``Math.sqrt(n)``
@@ -1049,17 +1049,17 @@ if it has a single item. Note that the ``slice`` method can take negative indice
   * - ``a.p.entries()``
     - Return array iterator
   * - ``a.p.every(func, [this])``
-    - Return boolean if ``func(item, [idx, [a]])`` is true for every item in array (``idx`` is the index, and ``a`` is the array). ``this`` is the value of ``this`` for the function 
+    - Return boolean if ``func(item, [idx, [a]])`` is true for every item in array (``idx`` is the index, and ``a`` is the array). ``this`` is the value of ``this`` for the function
   * - ``a.p.fill(val, [start, [end]])``
     - Return ``a`` mutated, with ``val`` inserted from ``start`` index up to but not including ``end`` index. Index values may be negative
   * - ``a.p.filter(func, [this])``
-    - Return a new array of items from ``a`` where predicate ``func(item, [idx, [a]])`` is true. ``this`` is the value of ``this`` for the function 
+    - Return a new array of items from ``a`` where predicate ``func(item, [idx, [a]])`` is true. ``this`` is the value of ``this`` for the function
   * - ``a.p.find(func, [this])``
-    - Return first item (or ``undefined``) from ``a`` where predicate ``func(item, [idx, [a]])`` is true. ``this`` is the value of ``this`` for the function  
+    - Return first item (or ``undefined``) from ``a`` where predicate ``func(item, [idx, [a]])`` is true. ``this`` is the value of ``this`` for the function
   * - ``a.p.findIndex(func, [this])``
-    - Return first index (or ``-1``) from ``a`` where predicate ``func(item, [idx, [a]])`` is true. ``this`` is the value of ``this`` for the function  
+    - Return first index (or ``-1``) from ``a`` where predicate ``func(item, [idx, [a]])`` is true. ``this`` is the value of ``this`` for the function
   * - ``a.p.forEach(func, [this])``
-    - Return ``undefined``. Apply ``func(item, [idx, [a]])`` to every item of ``a``. ``this`` is the value of ``this`` for the function  
+    - Return ``undefined``. Apply ``func(item, [idx, [a]])`` to every item of ``a``. ``this`` is the value of ``this`` for the function
   * - ``a.p.includes(val, [start])``
     - Return a boolean if ``a`` contains ``val`` starting from ``start`` index
   * - ``a.p.indexOf(val, [start])``
@@ -1071,7 +1071,7 @@ if it has a single item. Note that the ``slice`` method can take negative indice
   * - ``a.p.lastIndexOf(val, [start])``
     - Return last index (or ``-1``) of ``val`` in ``a``, searching backwards from ``start`` index
   * - ``a.p.map(func, [this])``
-    - Return new array with ``func(item, [idx, [a]])`` called on every item of ``a``. ``this`` is the value of ``this`` for the function  
+    - Return new array with ``func(item, [idx, [a]])`` called on every item of ``a``. ``this`` is the value of ``this`` for the function
   * - ``a.p.pop()``
     - Return last item (or ``undefined``) of ``a`` (mutates ``a``)
   * - ``a.p.push(val, [..., valN])``
@@ -1087,7 +1087,7 @@ if it has a single item. Note that the ``slice`` method can take negative indice
   * - ``a.p.slice([start, [end]])``
     - Return shallow copy of ``a`` from ``start`` up to but not including ``end``. Negative index values allowed
   * - ``a.p.some(func, [this])``
-    - Return boolean if ``func(item, [idx, [a]])`` is true for any item in array (``idx`` is the index, and ``a`` is the array). ``this`` is the value of ``this`` for the function 
+    - Return boolean if ``func(item, [idx, [a]])`` is true for any item in array (``idx`` is the index, and ``a`` is the array). ``this`` is the value of ``this`` for the function
   * - ``a.p.sort([func])``
     - Return and mutate sorted ``a``. Can use ``func(a, b)`` which returns ``-1``, ``0``, or ``1``
   * - ``a.p.splice(start, [deleteCount, [item1, ..., itemN]])``
@@ -1208,7 +1208,7 @@ To put a typed array into a normal array, we can use the *spread* operator::
        - 8
        - 64 bit floating point
        - ``float``
-     
+
 The following ``Array`` methods are missing: ``push``, ``pop``, ``shift``, ``splice``, and ``unshift``.
 
 There are also two extra methods found on ``TypedArrays``
@@ -1384,7 +1384,7 @@ Dates created with the constructor are in the local time. To create a ``Date`` i
      * - ``Z``
        - Time zone, either ``Z`` for UTC, or ``+HH:mm`` or ``-HH:mm``
 
-  
+
 
 ..  longtable: format: {p{.4\textwidth} p{.5\textwidth}}
 
@@ -1663,7 +1663,7 @@ of adding difference::
     }
     return result;
   }
-  
+
   let even = digits.difference(odd);
   console.log(even);  // Set { 0, 2, 4, 6, 8 }
 
@@ -1708,7 +1708,7 @@ of adding difference::
       item of ``s`` (same interface as ``Map``)
   * - ``s.p.forEach(func, [this])``
     - Return ``undefined``. Apply ``func(item, item, s)`` to every item in ``s``. Same interface as ``Array`` and ``Map``
-      
+
   * - ``s.p.has(item)``
     - Return boolean if ``item`` found in ``s``
   * - ``s.p.values()``
@@ -1777,9 +1777,9 @@ The constructor takes two arguments, a target, and a handler::
        return true
      }
    }
-    
+
    const cal = new Proxy({}, handler)
-    
+
    cal.month = 12
    console.log(cal.month)  // 12
    cal.month = 0  // RangeError
@@ -1834,10 +1834,10 @@ The ``Reflect`` object allows you to inspect objects. ``Reflect`` is not a const
   * - ``Reflect.set(obj, key, value, [this])``
     - Return ``Boolean`` if successful setting property ``key`` on ``obj``.
 
-  
 
-    
-  
+
+
+
 
 Symbols
 -------
@@ -1905,7 +1905,7 @@ The constructor takes an optional description argument::
   * - Method
     - Description
   * - ``Symbol.for(key)``
-    - Return symbol in global registry for ``key``, other create symbol and return it. 
+    - Return symbol in global registry for ``key``, other create symbol and return it.
   * - ``Symbol.keyFor(symbol)``
     - Return string value for symbol in global registry, ``undefined`` if symbol not in registry
 
@@ -1958,7 +1958,7 @@ Built-in Functions
     - Return the encoded version of the URI. Should be used on full URI
   * - ``encodeURIComponent(uri)``
     - Return the encoded version of the URI. Should be used on parts of URI
-  
+
 
 
 
@@ -2060,7 +2060,7 @@ Calling Functions
 You can use ``...`` to *spread* an array into arguments::
 
   add_many(...[1, 42., 7])
-  
+
 
 The ``bind`` Method
 --------------------
@@ -2137,7 +2137,7 @@ without growing the stack::
 
   Some implementations might not support this. This fails with
   Node 7.7 and Chrome 56 with ``fib(100000)``.
-  
+
 
 Classes
 =======
@@ -2180,11 +2180,11 @@ Prior to ES6, we could only create objects from functions::
     this.size = wheelSize;
     this.ratio = gearRatio;
   }
-  
+
   Bike2.prototype.gearInches = function() {
     return this.ratio * this.size
   }
-  
+
   let b = new Bike2(27, 33/11);
   console.log(b.gearInches());
 
@@ -2196,7 +2196,7 @@ Prior to ES6, we could only create objects from functions::
   would get its own copy.
 
 ES6 just provides an arguably cleaner syntax for this.
-  
+
 
 Subclasses
 -------------
@@ -2217,7 +2217,7 @@ should return ``Object.create(...)``.
       super(wheelSize, ratio);
       this.cogs = cogs;
       this.rings = rings;
-      
+
     }
 
     shift(ringIdx, cogIdx) {
@@ -2241,7 +2241,7 @@ A *static method* is a method called directly on the class, not on the instance.
   class Recumbent extends Bike {
     static isFast() {
       return true;
-    } 
+    }
   }
 
   Recumbent.isFast();  // true
@@ -2285,7 +2285,7 @@ Assignment
 
 .. list-table:: Built-in Operators
   :header-rows: 1
-  
+
   * - Operator
     - Description
   * - ``=``
@@ -2370,7 +2370,7 @@ and an optional ``else`` statement at the end::
   }
 
   letter_grade(grade);  // 'C'
-  
+
 
 ES6 supports the following tests: ``>``, ``>=``, ``<``, ``<=``, ``==``, ``!=``,
 ``===``, and ``!==``. For boolean operators use ``&&``, ``||``, and ``!`` for
@@ -2392,7 +2392,7 @@ Short Circuiting
 The ``and`` statement will *short circuit* if it evaluates to false::
 
   0 && 1/0  // 0
-  
+
 
 Likewise, the ``or`` statement will short circuit when something evaluates to true::
 
@@ -2433,7 +2433,7 @@ ES6 supports the switch statement::
   }
 
   strings('violin');  // 4
-  
+
 
 
 Looping
@@ -2460,9 +2460,9 @@ And a ``do ... while`` loop::
   do {
     console.log(num)
     num -= 1
-  } while (num > 0) 
+  } while (num > 0)
   console.log('Blastoff!')
-  
+
 
 Iteration
 ---------
@@ -2482,7 +2482,7 @@ Here is an example of creating a class for iteration::
       return this;  // something with next
     }
 
-    next() { 
+    next() {
       [this.val1, this.val2] = [this.val2, this.val1 + this.val2];
       return {done: false, value: this.val1};
     }
@@ -2498,7 +2498,7 @@ And here we use it in a ``for .. of`` loop::
       break;
     }
   }
-  
+
 
 We can also loop with an object literal::
 
@@ -2594,20 +2594,20 @@ Iterators that use ``function*`` and ``yield``, rather than normal ``function``
 and ``return`` are *generators*. They generate values on the fly as they are
 iterated over. Following a ``yield`` statement, the state of the function is
 frozen. ::
-  
+
   let fibGen = {
     [Symbol.iterator]: function*() {
       let val1 = 1;
       let val2 = 2;
       while (true) {
         yield val1;
-        [val1, val2] = [val2, val1 + val2];    
+        [val1, val2] = [val2, val1 + val2];
       }
     }
   }
 
 Using a generator::
-  
+
   for (var val of fibGen) {
       console.log(val);
       if (val > 5) {
@@ -2648,7 +2648,7 @@ A module is a JavaScript file. To use object in other files, we need to *export*
       }
     }
   }
-  
+
 Using Modules
 -------------
 
@@ -2745,7 +2745,7 @@ the literal syntax. Between the slashes place the regular expression. Flags can 
 at the end::
 
   let names = 'Paul, George, Ringo, and John'
-  
+
   let re = /(Ringo|Richard)/g;
 
 You can use the ``match`` method on a string::
@@ -2782,7 +2782,7 @@ You can also call the constructor::
   * - ``y``
     - *Sticky* match, start looking from ``r.lastIndex`` property
   * - ``u``
-    - *Unicode* match 
+    - *Unicode* match
 
 ..    [\t\n\v\f\r \u00a0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000\ufeff]
 
@@ -2823,7 +2823,7 @@ You can also call the constructor::
   * - ``\u{HHHH}``
     - Match one unicode character with hex code ``HHHH`` (use ``u`` flag)
 
-       
+
 
       .. 21.2.1
 
