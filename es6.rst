@@ -2650,7 +2650,7 @@ We can load exported object using the ``import`` statement::
 
 .. note::
 
-  To use imports in browsers or node, we need to use Babel to get support::
+  As of now, support for this feature is limited (available behind flag in Chrome 60, Edge 38, Firefox 54 and up). To use imports in non-modern browsers or in node, we need to use Babel to get support::
 
      $ npm install --save-dev babel-cli babel-preset-env
 
