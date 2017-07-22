@@ -2396,7 +2396,7 @@ The ``and`` statement will *short circuit* if it evaluates to false::
 
 Likewise, the ``or`` statement will short circuit when something evaluates to true::
 
-  1 or 1/0  // 1
+  1 || 1/0  // 1
 
 Ternary Operator
 -------------------
