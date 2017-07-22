@@ -2550,18 +2550,6 @@ regardless of whether and exception occurred::
     // run after either block
   }
 
-Conditional Catch Clauses
--------------------------
-
-If we know a specific exception will be thrown, we can handle that exception::
-
-  try {
-    // might throw TypeError
-  }
-  catch(e if e instance of TypeError) {
-    // handle TypeError exception
-  }
-
 Throwing Errors
 ---------------
 
