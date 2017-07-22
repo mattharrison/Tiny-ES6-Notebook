@@ -2422,18 +2422,14 @@ Switch
 ES6 supports the switch statement::
 
   function strings(inst) {
-    let res;
     switch(inst) {
       case 'guitar':
-        res = 6;
-        break;
+        return 6;
       case 'violin':
-        res = 4;
-        break;
+        return 4;
       default:
-        res = 1;
+        return 1;
     }
-    return res;
   }
 
   strings('violin');  // 4
