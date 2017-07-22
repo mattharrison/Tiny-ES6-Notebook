@@ -240,7 +240,7 @@ We can coerce other values to booleans with the ``Boolean`` wrapper. Most values
   * - ``true``
     - ``false``
   * - Most objects
-    - ``nulll``
+    - ``null``
   * -  ``1``
     - ``0`` or ``-0``
   * - ``"string"``
