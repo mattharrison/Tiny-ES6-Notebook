@@ -151,8 +151,21 @@ Default values can also be provided for object destructuring::
 
   let paul = {name: 'Paul', year: 1942};
 
-  let {name:'Joe', inst:'Guitar', year} = paul;
+  let {name = 'Joe', inst = 'Guitar', year} = paul;
 
+
+We can also rename the properties during object destrucruting::
+
+  let paul = {name: 'Paul', year: 1942};
+
+  let {name: firstname, inst: instrument, year} = paul;
+
+
+...and we can combine renaming with default values::
+
+  let paul = {name: 'Paul', year: 1942};
+
+  let {name: firstname = 'Joe', inst: instrument = 'Guitar', year} = paul;
 
 Types
 ===============
@@ -227,7 +240,7 @@ We can coerce other values to booleans with the ``Boolean`` wrapper. Most values
   * - ``true``
     - ``false``
   * - Most objects
-    - ``nulll``
+    - ``null``
   * -  ``1``
     - ``0`` or ``-0``
   * - ``"string"``
