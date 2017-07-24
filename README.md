@@ -15,8 +15,9 @@ to the JavaScript syntax.
 Reviews
 ---------
 
-Waiting for your tweets or comments
+> How arrogant. Why the *#$? would anyone buy this for schools? This is not an educational tool at all. Merely a reference for stuff *you personally* thought you may find useful. - Reddit Commentator
 
+Waiting for your tweets or comments
 
 
 Bulk Purchase
