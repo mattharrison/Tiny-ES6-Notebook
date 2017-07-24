@@ -1472,7 +1472,7 @@ Dates created with the constructor are in the local time. To create a ``Date`` i
     - Return milliseconds after Unix epoch after mutating day values
   * - ``d.p.setUTCHours(hours, [min, [sec, [ms]]])``
     - Return milliseconds after Unix epoch after mutating time values
-  * - ``d.p.setUTCMilliseconds(ms)``
+  * - ``d.p.setUTCMilliseconds( ms)``
     - Return milliseconds after Unix epoch after mutating ms value
   * - ``d.p.setUTCMinutes(min, [sec, [ms]])``
     - Return milliseconds after Unix epoch after mutating time values
