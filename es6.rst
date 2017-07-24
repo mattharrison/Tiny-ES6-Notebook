@@ -186,7 +186,7 @@ A value that often represents a place where an object will be expected.
 ::
 
    let count = null
-   typeof(count) === "object"
+   typeof count === "object"
 
 
 .. note::
@@ -246,7 +246,7 @@ We can coerce other values to booleans with the ``Boolean`` wrapper. Most values
   * - ``"string"``
     - ``""`` (empty string)
   * - ``[]`` (empty list)
-    -
+    - ``undefined``
   * - ``{}`` (empty object)
     -
   * - ``Boolean(new Boolean(false))``
@@ -311,9 +311,15 @@ ES6 adds the ability to have object keys created from variable names::
   const name = 'Paul'
   const person = { name }  // like name: 'Paul'
 
-If we want to include properties in another object, we can do a shallow *spread*::
+.. note::
 
-  const p2 = { ...person, copy: true }
+   Array spread is an ES6 feature. Object spread is not, though many JS engines support it.
+
+   If we want to include properties in another object, we can do a shallow *spread*::
+
+     const p2 = { ...person, copy: true }
+
+
 
 In addition there is support for *computed property keys*::
 
@@ -778,17 +784,17 @@ Alternatively the ``+`` operator allows for string concatenation::
   "the end"
 
 
-Template Strings
-----------------
+Template Literals
+-----------------
 
-Using backticks, you can create *template strings*. These allow for interpolation::
+Using backticks, you can create *template literals*. These allow for interpolation::
 
   let name = 'Paul';
   let instrument = 'bass';
 
   var `Name: ${name} plays: ${instrument}`
 
-Note that template strings can be multi-line::
+Note that template literals can be multi-line::
 
   `Starts here
   and ends here`
@@ -834,7 +840,7 @@ Methods
   * - ``String.fromCodePoint(n1, ...)``
     - Return string containing characters from Unicode points ``n1``
   * - ``String.raw``
-    - Create a raw template string (follow this by your string surrounded by back ticks)
+    - Create a raw template literal (follow this by your string surrounded by back ticks)
 
 
 ..  longtable: format: {>{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.4\textwidth} >{\hangindent=1em\hangafter=1\raggedright\arraybackslash }p{.5\textwidth}}
@@ -955,9 +961,9 @@ Arrays need not be dense::
   console.log(people)
   //["Paul", "John", "George", "Ringo", 6: "Billy"]
 
-The ``indexOf`` method is useful for checking membership on arrays::
+The ``includes`` method is useful for checking membership on arrays::
 
-  people.indexOf('Yoko')   // -1
+  people.includes('Yoko')   // true
 
 If we need the index number during iteration, the ``entries`` method gives us a list of index, item pairs::
 
@@ -1856,6 +1862,10 @@ The constructor takes an optional description argument::
    Symbol('name') == Symbol('name')   // false
    Symbol('name') === Symbol('name')  // false
 
+.. note::
+
+  ``Symbol`` is not a constructor, and a ``TypeError`` will be raised if you try
+  to use it as one.
 
 .. section 19.4
 
@@ -1949,7 +1959,7 @@ Built-in Functions
   * - ``parseFloat(str)``
     - Return float if ``str`` can be converted to a number, else ``NaN``
   * - ``parseInt(val, radix)``
-    - Return float if ``str`` can be converted to an integer, else ``NaN``. It ignores characters that are not numbers in ``radix``
+    - Return integer if ``str`` can be converted to an integer, else ``NaN``. It ignores characters that are not numbers in ``radix``
   * - ``decodeURI(uri)``
     - Return the unencoded version of the string. Should be used on full URI
   * - ``decodeURIComponent(str)``
@@ -2443,7 +2453,7 @@ There are various ways to iterate:
 
 * ``for ... in`` - Iterates over the properties of an object. This only walks through properties that have ``[[Enumerable]]`` set to ``true``.
 * ``for ... of`` - Iterates over the items of a collection. Any object which has the ``[Symbol.iterator]`` property can be iterated with this method.
-* ``foreach`` is a method on the ``Array`` object. It takes a callback that is invoked for every item of the array.
+* ``forEach`` is a method on the ``Array`` object. It takes a callback that is invoked for every item of the array.
 
 There is also a ``while`` loop::
 
