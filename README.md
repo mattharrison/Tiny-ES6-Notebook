@@ -19,6 +19,8 @@ Reviews
 
 > that is a good tiny reference book for Javascript - Sebastien
 
+> For those who are catching up on JS https://github.com/mattharrison/Tiny-ES6-Notebook … thanks @\_\_mharrison\_\_ - @ZoliDay5
+
 Waiting for your tweets or comments
 
 
